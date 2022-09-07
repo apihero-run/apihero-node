@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "dist/dts",
+    "esModuleInterop": true,
+    "types": ["node"],
+    "module": "es2015",
+    "lib": ["ES6", "DOM"],
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "outDir": "dist/esm",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES6"
+  },
+  "include": ["src/**/*.ts"]
+}

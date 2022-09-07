@@ -1,0 +1,55 @@
+{
+  "name": "@apihero/node",
+  "version": "1.0.0",
+  "description": "Use API Hero in a Node.js 18+ application",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">= 18"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apihero-run/apihero-node.git"
+  },
+  "keywords": [
+    "API Hero",
+    "node",
+    "fetch",
+    "typescript",
+    "rest",
+    "api",
+    "http"
+  ],
+  "author": "Eric Allam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apihero-run/apihero-node/issues"
+  },
+  "homepage": "https://github.com/apihero-run/apihero-node#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "react": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-typescript2": "^0.33.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@apihero/core": "^1.0.1",
+    "tiny-invariant": "^1.2.0"
+  }
+}
