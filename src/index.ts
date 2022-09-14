@@ -1,7 +1,6 @@
 import { ApiHeroEndpoint } from "@apihero/core";
 import invariant from "tiny-invariant";
 import { FetchEndpointResult } from "./@types";
-import fetch from "node-fetch";
 import debugFactory from "debug";
 
 const debug = debugFactory("apihero:node");
