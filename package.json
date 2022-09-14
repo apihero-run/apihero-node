@@ -1,6 +1,6 @@
 {
   "name": "@apihero/node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use API Hero in a Node.js 18+ application",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
