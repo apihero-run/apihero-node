@@ -1,8 +1,10 @@
 import { ApiHeroEndpoint } from "@apihero/core";
 import invariant from "tiny-invariant";
 import { FetchEndpointResult } from "./@types";
+import fetch from "node-fetch";
 
-const GATEWAY_URL = process.env.APIHERO_URL ?? "https://gateway.apihero.run";
+const GATEWAY_URL =
+  process.env.APIHERO_GATEWAY_URL ?? "https://gateway.apihero.run";
 const PROJECT_KEY = process.env.APIHERO_PROJECT_KEY;
 
 invariant(
