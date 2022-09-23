@@ -4,6 +4,7 @@ import { FetchEndpointResult } from "./@types";
 import debugFactory from "debug";
 
 const debug = debugFactory("apihero:node");
+const requestDebug = debugFactory("apihero:node:request");
 
 const GATEWAY_URL =
   process.env.APIHERO_GATEWAY_URL ?? "https://gateway.apihero.run";
@@ -56,6 +57,13 @@ export async function fetchEndpoint<TProps, TResponseBody, THeaders>(
   });
 
   debug("response for endpoint %s [%d]", endpoint.id, response.status);
+
+  const debugUri = response.headers.get("x-apihero-debug-uri");
+  const requestId = response.headers.get("x-apihero-request-id");
+
+  if (debugUri && requestId) {
+    requestDebug(`View request url: %s?requestId=%s`, debugUri, requestId);
+  }
 
   if (!response.ok) {
     const error = new Error(response.statusText);
